@@ -19,9 +19,6 @@ const Footer = () => {
           </div>
           <div className="flex-1 flex flex-col items-center justify-center py-10">
             <div className="space-y-3">
-              <h3 className="uppercase text-center lg:text-left dark:text-gray-900 text-sm lg:text-base">
-                Developers
-              </h3>
               <ul className="space-y-1 text-center lg:text-left text-sm lg:text-base">
                 <li>
                   <a
@@ -29,7 +26,7 @@ const Footer = () => {
                     href="#"
                     className="hover:underline"
                   >
-                    Public API
+                    About Us
                   </a>
                 </li>
                 <li>
@@ -38,7 +35,7 @@ const Footer = () => {
                     href="#"
                     className="hover:underline"
                   >
-                    Documentation
+                    How It Works
                   </a>
                 </li>
                 <li>
@@ -47,13 +44,22 @@ const Footer = () => {
                     href="#"
                     className="hover:underline"
                   >
-                    Guides
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="hover:underline"
+                  >
+                    Privacy Policy / Terms of Service
                   </a>
                 </li>
               </ul>
             </div>
-            <div className="uppercase text-center lg:text-left dark:text-gray-900 mt-4 text-sm lg:text-base">
-              Social media
+            <div className="uppercase text-center lg:text-left dark:text-white mt-4 text-sm lg:text-base">
+              Find us on
             </div>
             <div className="flex justify-center lg:justify-start space-x-3 mt-2">
               <a
