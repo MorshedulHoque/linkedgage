@@ -32,33 +32,40 @@ const HeroFourth = () => {
 
       {/* Statistics Section */}
       <div className="max-w-6xl mx-auto text-center py-10 md:py-16 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-6">
-          By the Numbers
-        </h2>
-        <p className="text-gray-300 mb-4 md:mb-6">
-          See how our LinkedIn extension is transforming conversations globally.
-        </p>
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 items-center">
-          {[
-            { label: "Total Users", value: "Over 10,000" },
-            { label: "Total Comments Generated", value: "1 million+" },
-            { label: "Global Reach", value: "50+ countries" },
-            { label: "User Satisfaction", value: "95%" },
-            { label: "Average Response Time", value: "Under 5 seconds" },
-            { label: "Active Sessions", value: "20,000+" }, // Added new statistic
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 rounded-xl shadow-md text-center w-28 h-28 md:w-32 md:h-32 flex flex-col justify-center items-center transition-transform transform hover:scale-105 duration-300"
-            >
-              <p className="text-gray-400 text-xs md:text-sm mb-1">
-                {stat.label}
-              </p>
-              <p className="text-gray-50 text-lg font-semibold">{stat.value}</p>
-            </div>
-          ))}
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-50 mb-6">
+      By the Numbers
+    </h2>
+    <p className="text-gray-300 mb-4 md:mb-6">
+      See how our LinkedIn extension is transforming conversations globally.
+    </p>
+    <div className="flex flex-wrap justify-center gap-4 md:gap-6 items-center">
+      {[
+        { label: "Total Users", value: "10,000+" },
+        { label: "Comments Generated", value: "1 million+" },
+        { label: "Countries Global Reach", value: "50+" },
+        { label: "User Satisfaction", value: "95%" },
+        { label: "Average Response Time", value: "> 5 sec" },
+        { label: "Active Sessions", value: "20,000+" },
+      ].map((stat, index) => (
+        <div
+          key={index}
+          className="border-2 rounded-xl p-4 shadow-md text-center w-36 h-28 md:w-40 md:h-32 flex flex-col justify-between items-center transition-transform transform hover:scale-105 duration-300"
+        >
+          <div className="w-full">
+            <p className="text-gray-50 text-2xl font-semibold justify-center">{stat.value}</p>
+          </div>
+          <div className="pt-6 flex-1 flex items-start justify-center w-full">
+            <p className="text-gray-400 text-xs md:text-sm text-center">
+              {stat.label}
+            </p>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+
+
+
     </div>
   );
 };
