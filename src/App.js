@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const App = () => {
   useEffect(() => {
     AOS.init({ once: true });
-    AOS.refresh(); // Refresh to ensure animations are applied
+    AOS?.refresh(); // Refresh to ensure animations are applied
   }, []);
   return (
     <div>

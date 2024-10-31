@@ -1,6 +1,7 @@
 
 import React from "react";
 import Logo from "../../images/Linkedgagefull-white.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,13 +22,9 @@ const Footer = () => {
             <div className="space-y-3">
               <ul className="space-y-1 text-center lg:text-left text-sm lg:text-base">
                 <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:underline"
-                  >
+                  <Link to="/about">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a

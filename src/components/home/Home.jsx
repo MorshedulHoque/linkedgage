@@ -12,7 +12,7 @@ import NewsletterSignup from "./NewsletterSignup";
 
 const Home = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
         <Hero />
         <HeroSecond />
         <NewSlider />
