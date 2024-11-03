@@ -11,7 +11,7 @@ const Hero = () => {
     <div className="relative min-h-fit bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div
-        className="absolute top-[35%] sm:top-[35%] md:top-[32%] lg:top-[30%] top-1/2 left-1/2 transform -translate-x-[55%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+        className="absolute top-[40%] sm:top-[38%] md:top-[35%] lg:top-[30%] left-1/2 transform -translate-x-[55%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
       >
         <div className="absolute w-full" data-aos="zoom-out" data-aos-duration="2000">
           <img src={demo} alt="" className="w-full h-auto object-cover" />
