@@ -5,11 +5,26 @@ import { IoClose } from "react-icons/io5"; // Close icon
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [opacity, setOpacity] = useState(1);
   const sidebarRef = useRef(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    const maxScroll = 200; // Maximum scroll value at which the navbar is fully transparent
+    const newOpacity = Math.max(0.4, 1 - offset / maxScroll);
+    setOpacity(newOpacity);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Close sidebar if clicked outside
   useEffect(() => {
@@ -25,8 +40,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50">
-      <div className="navbar bg-black text-white py-4 px-4 md:px-8 text-base flex items-center justify-between">
+    <div className="sticky top-0 z-50" style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})`, borderBottom: '1px solid #ccc' }}>
+      <div className="navbar text-white py-2 px-4 md:px-8 text-base flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex-1 flex justify-center">
           <a href="/">
