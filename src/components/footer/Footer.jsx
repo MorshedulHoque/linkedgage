@@ -64,17 +64,17 @@ const Footer = () => {
             <div className="flex justify-center lg:justify-start space-x-3 mt-2">
               <ul className="flex">
                 <li className="list-none">
-                  <a href="#" className="w-4 h-4 sm:w-8 sm:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
+                  <a href="#" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
                     <FontAwesomeIcon icon={faFacebookF} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
                   </a>
                 </li>
                 <li className="list-none mx-4">
-                  <a href="#" className="w-4 h-4 sm:w-8 sm:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
+                  <a href="#" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
                     <FontAwesomeIcon icon={faTwitter} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
                   </a>
                 </li>
                 <li className="list-none">
-                  <a href="#" className="w-4 h-4 sm:w-8 sm:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
+                  <a href="#" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
                     <FontAwesomeIcon icon={faLinkedinIn} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
                   </a>
                 </li>
