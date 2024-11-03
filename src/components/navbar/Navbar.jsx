@@ -43,7 +43,7 @@ const Navbar = () => {
     <div className="sticky top-0 z-50" style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})`, borderBottom: '1px solid #ccc' }}>
       <div className="navbar text-white py-2 px-4 md:px-8 text-base flex items-center justify-between">
         {/* Logo Section */}
-        <div className="flex-1 flex justify-center">
+        <div className="flex-1 flex justify-center items-center">
           <a href="/">
             <img src={Logo} alt="Homepage" className="w-32 h-auto md:w-56" />
           </a>

@@ -18,7 +18,7 @@ const NewsletterSignup = () => {
           Get Ahead of the Game!
         </h2>
 
-        <p className="mx-auto mt-2 w-3/5 text-center text-lg leading-8 text-gray-300">
+        <p className="mx-auto mt-2 w-4/5 sm:w-3/4 md:w-3/4 lg:w-3/5 xl:w-3/5 text-center text-lg leading-8 text-gray-300">
           Join our insider community for the latest insights, powerful growth hacks, and essential updates across social media, tech, and business. Be the first to know and transform your strategies with expert tips delivered directly to your inbox. Don’t miss out—elevate your game today!
         </p>
 

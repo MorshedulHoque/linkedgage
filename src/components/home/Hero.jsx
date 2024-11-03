@@ -11,13 +11,13 @@ const Hero = () => {
     <div className="relative min-h-fit bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div
-        className="absolute top-[32%] sm:top-[35%] left-1/2 transform -translate-x-[55%] -translate-y-1/2
-        z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+        className="absolute top-[35%] sm:top-[35%] md:top-[32%] lg:top-[30%] top-1/2 left-1/2 transform -translate-x-[55%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
       >
         <div className="absolute w-full" data-aos="zoom-out" data-aos-duration="2000">
           <img src={demo} alt="" className="w-full h-auto object-cover" />
         </div>
       </div>
+
 
       {/* Bubbles */}
       <div className="absolute top-10 left-5 sm:top-20 sm:left-10 md:top-40 md:left-60 z-20">
@@ -26,13 +26,14 @@ const Hero = () => {
       <div className="absolute top-5 right-5 sm:top-10 sm:right-10 md:top-20 md:right-40 z-10">
         <img src={BubbleMd} alt="" className="w-8 sm:w-16 md:w-28 lg:w-32" />
       </div>
-      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-[20%] z-10">
+      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-[20%] sm:-translate-y-[18%] md:-translate-y-[15%] lg:-translate-y-[10%] z-10">
         <img
           src={MiddleLight}
           alt="Middle Light"
           className="w-6 sm:w-10 md:w-16 lg:w-auto"
         />
       </div>
+
       <div className="absolute -top-5 left-1/2 transform -translate-x-1/2 z-10 md:-top-10">
         <img src={BubbleSm} alt="" className="w-6 sm:w-10 md:w-20 lg:w-24" />
       </div>
@@ -45,7 +46,7 @@ const Hero = () => {
         <p className="text-xs sm:text-sm md:text-lg lg:text-xl mb-2 md:mb-4 text-gray-200">
           Generate engaging comments tailored to your tone and content!
         </p>
-        <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm sm:text-base md:text-lg transition-all duration-800 ease-in-out">
+        <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm sm:text-base md:text-lg transition-all duration-800 ease-in-out justify-center">
           <div className="indicator">Download Extension</div>
         </button>
       </div>

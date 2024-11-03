@@ -77,7 +77,7 @@ const ReviewCard = () => {
         className="py-20 sm:py-32 z-[-2] bg-neutral-950"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl md:text-center">
+          <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight text-white mb-10">
               What Our Customers Are Saying
             </h2>
