@@ -1,11 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import Home from "../components/home/Home";
-import Blog from "../components/blog/Blog";
-import Admin from "../components/admin/Admin";
-import OnePost from "../components/blog/OnePost";
-import About from "../components/about/About";
-
+import Blog from "../components/Blog/Blog";
+import BlogPost from "../components/Blog/BlogPost"; // Import your BlogPost component
 
 const router = createBrowserRouter([
   {
@@ -21,18 +18,10 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "/blog/:slug",
-        element: <OnePost />,
-      },
-      {
-        path: "/about",
-        element: <About />,
+        path: "/blog/:slug", // Dynamic route for blog post
+        element: <BlogPost />, // Component to render the specific blog post
       },
     ],
-  },
-  {
-    path: "/admin",
-    element: <Admin />,
   },
 ]);
 
