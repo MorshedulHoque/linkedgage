@@ -169,7 +169,7 @@ function BlogPost() {
                         loading="lazy"
                     />
                 )}
-                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-lightBluef">{post.fields.title}</h1>
+                <h1 className="text-3xl md:text-4xl font-bold mb-4 text-lightBlue">{post.fields.title}</h1>
                 <p className="text-sm mb-6 pt-2">
                     By {post.fields.author} on {new Date(post.fields.createdDate).toLocaleDateString()}
                 </p>
