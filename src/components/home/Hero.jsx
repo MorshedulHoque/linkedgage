@@ -4,6 +4,7 @@ import BubbleMd from "../../images/bubble_medium.png";
 import BubbleSm from "../../images/bubble_small.png";
 import MiddleLight from "../../images/Ellipse 5.png";
 import demo from "../../images/1.png";
+import demo2 from "../../images/Hero template-croped.jpg";
 import Carve from "./Carve/Carve";
 
 const Hero = () => {
@@ -11,10 +12,10 @@ const Hero = () => {
     <div className="relative min-h-fit bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div
-        className="absolute top-[40%] sm:top-[38%] md:top-[35%] lg:top-[30%] left-1/2 transform -translate-x-[55%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+        className="absolute top-[40%] sm:top-[38%] md:top-[35%] lg:top-[31%] left-[50%] transform -translate-x-[54%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
       >
-        <div className="absolute w-full" data-aos="zoom-out" data-aos-duration="2000">
-          <img src={demo} alt="" className="w-full h-auto object-cover" />
+        <div className="absolute w-full bordered border-8 rounded-2xl shadow-2xl border-gray-200/25">
+          <img src={demo2} alt="" className="w-full h-auto object-cover rounded-2xl" />
         </div>
       </div>
 
@@ -39,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Text Section */}
-      <div className="relative z-10 px-4 py-4 sm:py-6 text-center flex flex-col items-center gap-2" data-aos="zoom-out" data-aos-duration="2000">
+      <div className="relative z-10 px-4 py-4 sm:py-6 text-center flex flex-col justify-center items-center gap-2" data-aos="zoom-out" data-aos-duration="2000">
         <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-gray-50">
           Elevate Your LinkedIn <br /> <span>Conversations</span>
         </h1>
@@ -52,7 +53,10 @@ const Hero = () => {
       </div>
 
       {/* Curve background */}
-      <Carve />
+      <div>
+        <Carve />
+      </div>
+      
 
       {/* Glow Button Styles */}
       <style jsx>{`
