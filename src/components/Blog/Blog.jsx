@@ -144,7 +144,15 @@ function Blog() {
           </div>
         ) : (
           <div className="container mx-auto px-2 py-8 max-w-7xl">
-            <h1 className="text-3xl font-bold mb-6 text-center">Blog Posts</h1>
+            {/* <h1 className="text-3xl font-bold mb-6 text-center">Blog</h1> */}
+            <div className="max-w-xl mx-auto text-center xl:max-w-2xl pb-2">
+              <h2 className="text-3xl font-bold leading-tight text-gray-50 sm:text-4xl xl:text-5xl mb-6">
+                Blogs
+              </h2>
+              <p className="mb-4 text-gray-50 text-lg sm:text-xl">
+              Dive into our blog for the latest tips, trends, and insider secrets on boosting your social media impact. From engagement strategies to tech insights, we bring you fresh perspectives to fuel your growth and success!
+              </p>
+            </div>
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-duration="1000"> {/* Increased gap for more space */}
               {posts.map((post) => (
                 <div className='rounded-lg border-2 border-white p-2'>

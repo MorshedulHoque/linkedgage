@@ -24,6 +24,11 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center justify-center py-10">
             <div className="space-y-3">
               <ul className="space-y-1 text-center lg:text-left text-sm lg:text-base">
+              <li>
+                  <Link to="/blog">
+                    Blog
+                  </Link>
+                </li>
                 <li>
                   <Link to="/about">
                     About Us
