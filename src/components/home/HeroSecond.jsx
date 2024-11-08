@@ -1,7 +1,7 @@
 import React from "react";
-import first from "../../images/first.png";
-import second from "../../images/second.png";
-import third from "../../images/third.png";
+import first from "../../images/first.webp";
+import second from "../../images/second.webp";
+import third from "../../images/third.webp";
 
 const HeroSecond = () => {
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-import fourth from "../../images/fourth.png";
-import fifth from "../../images/fifth.png";
-import sixth from "../../images/sixth.png";
-import seven from "../../images/seven.png";
-import eight from "../../images/eight.png";
-import nine from "../../images/nine.png";
+import fourth from "../../images/fourth.webp";
+import fifth from "../../images/fifth.webp";
+import sixth from "../../images/sixth.webp";
+import seven from "../../images/seven.webp";
+import eight from "../../images/eight.webp";
+import nine from "../../images/nine.webp";
 import AnimatedGradientBorderTW from "./AnimatedGradientBorderTW";
 
 const HeroThird = () => {

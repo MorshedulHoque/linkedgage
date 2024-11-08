@@ -1,7 +1,7 @@
 import React from "react";
-import Globe from "../../images/Globe.png";
-import HeroBubbleLg from "../../images/HeroBubbleLg.png";
-import HeroBubbleSm from "../../images/HeroBubbleSm.png";
+import Globe from "../../images/Globe.webp";
+import HeroBubbleLg from "../../images/HeroBubbleLg.webp";
+import HeroBubbleSm from "../../images/HeroBubbleSm.webp";
 
 const HeroFifth = () => {
   return (

@@ -1,22 +1,23 @@
 import React from "react";
-import BubbleLg from "../../images/bubble_big.png";
-import BubbleMd from "../../images/bubble_medium.png";
-import BubbleSm from "../../images/bubble_small.png";
-import MiddleLight from "../../images/Ellipse 5.png";
-import demo from "../../images/1.png";
-import demo2 from "../../images/Hero template-croped.jpg";
+import BubbleLg from "../../images/bubble_big.webp";
+import BubbleMd from "../../images/bubble_medium.webp";
+import BubbleSm from "../../images/bubble_small.webp";
+import MiddleLight from "../../images/Ellipse 5.webp";
+import demo from "../../images/Hero template-croped.webp";
 import Carve from "./Carve/Carve";
 
 const Hero = () => {
   return (
     <div className="relative min-h-fit bg-black">
       {/* Hero Card */}
-      <div className="absolute top-[43%] sm:top-[38%] md:top-[35%] lg:top-[35%] left-[54%] sm:left-[40%] md:left-[35%] lg:left-[50%] flex justify-center transform -translate-x-[54%] sm:-translate-x-[40%] md:-translate-x-[35%] lg:-translate-x-[50%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl">
-        <div className="absolute w-[80%] sm:w-1/2 md:w-1/3 lg:w-full h-auto border-8 rounded-2xl shadow-2xl border-gray-200/25">
+      <div className="absolute top-[43%] sm:top-[38%] md:top-[35%] lg:top-[37%] left-[54%] sm:left-[40%] md:left-[35%] lg:left-[50%] flex justify-center transform -translate-x-[54%] sm:-translate-x-[40%] md:-translate-x-[35%] lg:-translate-x-[50%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl">
+        <div className="absolute w-[90%] sm:w-1/2 md:w-1/3 lg:w-[120%] h-auto border-4 border-gray-800/50 rounded-2xl shadow-2xl shadow-[0_0_22px_0px_#1f2937]" data-aos="zoom-out"
+        data-aos-duration="2000">
           <img
-            src={demo2}
+            src={demo}
             alt=""
-            className="w-full h-auto object-cover rounded-2xl"
+            loading="lazy"
+            className="w-full h-auto object-cover rounded-xl"
           />
         </div>
       </div>
@@ -28,7 +29,7 @@ const Hero = () => {
       <div className="absolute top-5 right-5 sm:top-10 sm:right-10 md:top-20 md:right-40 z-10">
         <img src={BubbleMd} alt="" className="w-8 sm:w-16 md:w-28 lg:w-32" />
       </div>
-      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-[20%] sm:-translate-y-[18%] md:-translate-y-[15%] lg:-translate-y-[10%] z-10">
+      <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-[20%] sm:-translate-y-[10%] md:-translate-y-[15%] lg:-translate-y-[20%] z-10">
         <img
           src={MiddleLight}
           alt="Middle Light"
@@ -42,7 +43,7 @@ const Hero = () => {
 
       {/* Hero Text Section */}
       <div
-        className="relative z-10 px-4 py-4 sm:py-6 text-center flex flex-col justify-center items-center gap-2"
+        className="relative z-20 px-4 py-4 sm:py-6 text-center flex flex-col justify-center items-center gap-2"
         data-aos="zoom-out"
         data-aos-duration="2000"
       >

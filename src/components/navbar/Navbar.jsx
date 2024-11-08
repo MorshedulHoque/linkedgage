@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import Logo from "../../images/Linkedgagefull-white.png";
+import Logo from "../../images/Linkedgagefull-white.webp";
 import { HiOutlineMenuAlt3 } from "react-icons/hi"; // Hamburger icon
 import { IoClose } from "react-icons/io5"; // Close icon
 

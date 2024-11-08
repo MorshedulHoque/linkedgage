@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 // Import images as specified
-import img1 from "../../images/1.png";
-import img2 from "../../images/2.png";
-import img3 from "../../images/3.png";
+import img1 from "../../images/1.webp";
+import img2 from "../../images/2.webp";
+import img3 from "../../images/3.webp";
 
 const content = [
   {
@@ -35,6 +35,7 @@ function NewSlider() {
     setFadeIn(false); // Start fading out
     setTimeout(() => {
       setSelectedIndex(newIndex % content.length); // Wrap around
+      setSelectedImage(content[newIndex % content.length].img); // Change image
       setFadeIn(true); // Start fading in
     }, 300); // Wait for fade-out duration
   };
@@ -101,6 +102,7 @@ function NewSlider() {
             <img
               src={content[selectedIndex].img}
               alt={content[selectedIndex].title}
+              loading="lazy" // Lazy load the image
               className={`object-contain w-full h-full transition-opacity duration-500 ${
                 fadeIn ? "opacity-100" : "opacity-0"
               }`}

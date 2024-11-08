@@ -1,5 +1,5 @@
 import React from "react";
-import Earth from "../../images/Earth_Print.png";
+import Earth from "../../images/Earth_Print.webp";
 
 const HeroFourth = () => {
   return (

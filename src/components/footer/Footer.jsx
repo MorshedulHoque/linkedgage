@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../images/Linkedgagefull-white.png";
+import Logo from "../../images/Linkedgagefull-white.webp";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
