@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* Bubbles */}
-      <div className="absolute top-10 left-5 sm:top-20 sm:left-10 md:top-40 md:left-60 z-20">
+      <div className="absolute top-10 left-5 sm:top-20 sm:left-10 md:top-40 md:left-60 z-10">
         <img src={BubbleLg} alt="" className="w-10 sm:w-20 md:w-36 lg:w-48" />
       </div>
       <div className="absolute top-5 right-5 sm:top-10 sm:right-10 md:top-20 md:right-40 z-10">
