@@ -11,13 +11,11 @@ const Hero = () => {
   return (
     <div className="relative min-h-fit bg-black">
       {/* Hero Card */}
-      <div className="absolute top-[43%] sm:top-[38%] md:top-[35%] lg:top-[35%] left-[54%] sm:left-[40%] md:left-[35%] lg:left-[50%] flex justify-center transform -translate-x-[54%] sm:-translate-x-[40%] md:-translate-x-[35%] lg:-translate-x-[50%] -translate-y-1/2 z-30 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl">
-        <div className="absolute w-[80%] sm:w-1/2 md:w-1/3 lg:w-full h-auto border-8 rounded-2xl shadow-2xl border-gray-200/25">
-          <img
-            src={demo2}
-            alt=""
-            className="w-full h-auto object-cover rounded-2xl"
-          />
+      <div
+        className="absolute top-[40%] sm:top-[38%] md:top-[35%] lg:top-[31%] left-[50%] transform -translate-x-[54%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl"
+      >
+        <div className="absolute w-full bordered border-8 rounded-2xl shadow-2xl border-gray-200/25">
+          <img src={demo2} alt="" className="w-full h-auto object-cover rounded-2xl" />
         </div>
       </div>
 
@@ -41,11 +39,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Text Section */}
-      <div
-        className="relative z-30 px-4 py-4 sm:py-6 text-center flex flex-col justify-center items-center gap-2"
-        data-aos="zoom-out"
-        data-aos-duration="2000"
-      >
+      <div className="relative z-10 px-4 py-4 sm:py-6 text-center flex flex-col justify-center items-center gap-2" data-aos="zoom-out" data-aos-duration="2000">
         <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-bold text-gray-50">
           Elevate Your LinkedIn <br /> <span>Conversations</span>
         </h1>
