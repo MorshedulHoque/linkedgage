@@ -26,18 +26,24 @@ const Navbar = () => {
     };
   }, []);
 
-  // Close sidebar if clicked outside
+  // Close the sidebar if clicked outside of the sidebar
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-        setIsSidebarOpen(false);
+        setIsSidebarOpen(false); // Close the sidebar when clicked outside
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
+
+    // Attach the event listener to handle clicks on the entire document
+    document.addEventListener("mousedown", handleClickOutside); // For desktop click
+    document.addEventListener("touchstart", handleClickOutside); // For mobile tap
+
+    // Cleanup the event listeners when the component unmounts
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, []);
+  }, []); // Only run once on mount
 
   return (
     <div
@@ -78,24 +84,25 @@ const Navbar = () => {
         <div
           ref={sidebarRef}
           className="fixed inset-0 bg-black bg-opacity-80 z-40 flex flex-col items-center pt-24 space-y-4 md:hidden"
+          id="mobile"
         >
-          {/* Sidebar Links */}
+          {/* Close Button for Sidebar */}
           <button
             className="absolute top-4 right-4 text-2xl text-white"
-            onClick={() => setIsSidebarOpen(false)}
+            onClick={() => setIsSidebarOpen(false)} // Close on click of the close button
           >
             <IoClose />
           </button>
 
           <button
             className="btn btn-ghost text-lg text-white"
-            onClick={() => setIsSidebarOpen(false)}
+            onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
           >
             Home
           </button>
           <button
             className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
-            onClick={() => setIsSidebarOpen(false)}
+            onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
           >
             Download Extension
           </button>
