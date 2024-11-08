@@ -20,9 +20,9 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -40,7 +40,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="sticky top-0 z-50" style={{ backgroundColor: `rgba(0, 0, 0, ${opacity})`, borderBottom: '1px solid #ccc' }}>
+    <div
+      className="sticky top-0 z-50"
+      style={{
+        backgroundColor: `rgba(0, 0, 0, ${opacity})`,
+        borderBottom: "1px solid #ccc",
+      }}
+    >
       <div className="navbar text-white py-2 px-4 md:px-8 text-base flex items-center justify-between">
         {/* Logo Section */}
         <div className="flex-1 flex justify-center items-center">
@@ -73,15 +79,23 @@ const Navbar = () => {
           ref={sidebarRef}
           className="fixed inset-0 bg-black bg-opacity-80 z-40 flex flex-col items-center pt-24 space-y-4 md:hidden"
         >
+          {/* Sidebar Links */}
+          <button
+            className="absolute top-4 right-4 text-2xl text-white"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            <IoClose />
+          </button>
+
           <button
             className="btn btn-ghost text-lg text-white"
-            onClick={toggleSidebar}
+            onClick={() => setIsSidebarOpen(false)}
           >
             Home
           </button>
           <button
             className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
-            onClick={toggleSidebar}
+            onClick={() => setIsSidebarOpen(false)}
           >
             Download Extension
           </button>

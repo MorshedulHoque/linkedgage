@@ -1,10 +1,13 @@
-
 import React from "react";
 import Logo from "../../images/Linkedgagefull-white.png";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faTwitter, faLinkedinIn, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faTwitter,
+  faLinkedinIn,
+  faGooglePlusG,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -24,15 +27,11 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center justify-center py-10">
             <div className="space-y-3">
               <ul className="space-y-1 text-center lg:text-left text-sm lg:text-base">
-              <li>
-                  <Link to="/blog">
-                    Blog
-                  </Link>
+                <li>
+                  <Link to="/blog">Blog</Link>
                 </li>
                 <li>
-                  <Link to="/about">
-                    About Us
-                  </Link>
+                  <Link to="/about">About Us</Link>
                 </li>
                 <li>
                   <a
@@ -69,18 +68,36 @@ const Footer = () => {
             <div className="flex justify-center lg:justify-start space-x-3 mt-2">
               <ul className="flex">
                 <li className="list-none">
-                  <a href="https://www.facebook.com/linkedgage" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
-                    <FontAwesomeIcon icon={faFacebookF} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
+                  <a
+                    href="https://www.facebook.com/linkedgage"
+                    className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all"
+                  >
+                    <FontAwesomeIcon
+                      icon={faFacebookF}
+                      className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white"
+                    />
                   </a>
                 </li>
                 <li className="list-none mx-4">
-                  <a href="https://x.com/LinkedGage" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
-                    <FontAwesomeIcon icon={faTwitter} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
+                  <a
+                    href="https://x.com/LinkedGage"
+                    className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all"
+                  >
+                    <FontAwesomeIcon
+                      icon={faTwitter}
+                      className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white"
+                    />
                   </a>
                 </li>
                 <li className="list-none">
-                  <a href="https://www.linkedin.com/in/a-s-m-morshedul-hoque/" className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all">
-                    <FontAwesomeIcon icon={faLinkedinIn} className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white" />
+                  <a
+                    href="https://www.linkedin.com/in/a-s-m-morshedul-hoque/"
+                    className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all"
+                  >
+                    <FontAwesomeIcon
+                      icon={faLinkedinIn}
+                      className="text-gray-800 text-xl transition-transform duration-500 ease-in-out transform hover:rotate-360 hover:text-white"
+                    />
                   </a>
                 </li>
               </ul>
