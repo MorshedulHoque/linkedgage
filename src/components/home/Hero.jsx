@@ -12,7 +12,7 @@ const Hero = () => {
     <div className="relative min-h-fit bg-black bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
       {/* Hero Card */}
       <div className="absolute top-[43%] sm:top-[38%] md:top-[35%] lg:top-[35%] left-[54%] sm:left-[40%] md:left-[35%] lg:left-[50%] flex justify-center transform -translate-x-[54%] sm:-translate-x-[40%] md:-translate-x-[35%] lg:-translate-x-[50%] -translate-y-1/2 z-20 px-4 w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl">
-        <div className="absolute w-[70%] sm:w-1/2 md:w-1/3 lg:w-full h-auto border-8 rounded-2xl shadow-2xl border-gray-200/25">
+        <div className="absolute w-[80%] sm:w-1/2 md:w-1/3 lg:w-full h-auto border-8 rounded-2xl shadow-2xl border-gray-200/25">
           <img
             src={demo2}
             alt=""
