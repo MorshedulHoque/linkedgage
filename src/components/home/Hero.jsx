@@ -16,7 +16,6 @@ const Hero = () => {
           <img
             src={demo}
             alt=""
-            loading="lazy"
             className="w-full h-auto object-cover rounded-xl"
           />
         </div>
