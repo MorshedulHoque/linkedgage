@@ -50,7 +50,8 @@ const Navbar = () => {
       className="sticky top-0 z-50"
       style={{
         backgroundColor: `rgba(0, 0, 0, ${opacity})`,
-        borderBottom: "1px solid #ccc",
+        boxShadow: `0 2px 4px rgba(135, 206, 250, 0.3), 0 2px 12px rgba(135, 206, 250, 0.4)`,
+        borderBottom: `0.5px solid #ccc`, // Set opacity on the border
       }}
     >
       <div className="navbar text-white py-2 px-4 md:px-8 text-base flex items-center justify-between">
@@ -65,8 +66,11 @@ const Navbar = () => {
 
         {/* Hamburger Menu for Mobile */}
         <div className="flex md:hidden">
-          <button onClick={toggleSidebar} className="text-2xl">
-            {isSidebarOpen ? <IoClose /> : <HiOutlineMenuAlt3 />}
+          <button
+            onClick={toggleSidebar}
+            className="text-2xl focus:outline-none focus:ring-none"
+          >
+            <HiOutlineMenuAlt3 /> {/* Hamburger icon */}
           </button>
         </div>
 
@@ -84,24 +88,23 @@ const Navbar = () => {
         <div
           ref={sidebarRef}
           className="fixed inset-0 bg-black bg-opacity-80 z-40 flex flex-col items-center pt-24 space-y-4 md:hidden"
-          id="mobile"
         >
           {/* Close Button for Sidebar */}
           <button
-            className="absolute top-4 right-4 text-2xl text-white"
+            className="absolute top-4 right-4 text-2xl text-white z-50 focus:outline-none focus:ring-none"
             onClick={() => setIsSidebarOpen(false)} // Close on click of the close button
           >
-            <IoClose />
+            <IoClose /> {/* Close icon inside the sidebar */}
           </button>
 
           <button
-            className="btn btn-ghost text-lg text-white"
+            className="btn btn-ghost text-lg text-white border-none focus:outline-none focus:ring-none"
             onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
           >
             Home
           </button>
           <button
-            className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
+            className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-none focus:outline-none focus:ring-none hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
             onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
           >
             Download Extension
