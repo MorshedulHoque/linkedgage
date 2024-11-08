@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Button from "./Button"; // Import the Button component
 
 const ReviewCard = () => {

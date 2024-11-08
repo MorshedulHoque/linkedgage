@@ -20,7 +20,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
       <div
         className={`border-l-4 border-lightBlue overflow-hidden transition-all duration-500 ease-in-out ${
           isOpen ? "max-h-40" : "max-h-0"
-        }`} // Set a max height when open
+        }`}
       >
         <p className="p-5 text-gray-300">{answer}</p>
       </div>
@@ -28,54 +28,49 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   );
 };
 
+const faqData = [
+  {
+    question: "How many comments can I generate per day?",
+    answer: "You can generate up to 10 comments for free each day. The limit resets daily.",
+  },
+  {
+    question: "Is there a premium version available?",
+    answer: "Not yet, but a premium subscription with more features is currently in development!",
+  },
+  {
+    question: "How does tone selection work?",
+    answer: "You can choose from a list of tones, and our AI will generate a comment that fits the post content and your selected tone.",
+  },
+  {
+    question: "Can I use this extension on posts in different languages?",
+    answer: "The extension understands posts in multiple languages but generates responses only in English.",
+  },
+  {
+    question: "What happens if I reach the daily comment limit?",
+    answer: "After reaching the limit of 10 comments, you’ll need to wait for the next day when it resets. If you urgently need more comments, email us, and we can upgrade your plan.",
+  },
+  {
+    question: "Do I need a LinkedIn account to use this extension?",
+    answer: "Yes, you need to be logged in to LinkedIn to use the extension.",
+  },
+  {
+    question: "Is my data secure while using this extension?",
+    answer: "Yes, your data is kept secure, and we prioritize your privacy and safety.",
+  },
+  {
+    question: "What if I need a tone that’s not in the list?",
+    answer: "If you need a specific tone urgently, email us, and we’ll upgrade your plan to accommodate your request right away!",
+  },
+];
+
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqData = [
-    {
-      question: "How many comments can I generate per day?",
-      answer:
-        "You can generate up to 10 comments for free each day. The limit resets daily.",
-    },
-    {
-      question: "Is there a premium version available?",
-      answer:
-        "Not yet, but a premium subscription with more features is currently in development!",
-    },
-    {
-      question: "How does tone selection work?",
-      answer:
-        "You can choose from a list of tones, and our AI will generate a comment that fits the post content and your selected tone.",
-    },
-    {
-      question: "Can I use this extension on posts in different languages?",
-      answer:
-        "The extension understands posts in multiple languages but generates responses only in English.",
-    },
-    {
-      question: "What happens if I reach the daily comment limit?",
-      answer:
-        "After reaching the limit of 10 comments, you’ll need to wait for the next day when it resets. If you urgently need more comments, email us, and we can upgrade your plan.",
-    },
-    {
-      question: "Do I need a LinkedIn account to use this extension?",
-      answer: "Yes, you need to be logged in to LinkedIn to use the extension.",
-    },
-    {
-      question: "Is my data secure while using this extension?",
-      answer:
-        "Yes, your data is kept secure, and we prioritize your privacy and safety.",
-    },
-    {
-      question: "What if I need a tone that’s not in the list?",
-      answer:
-        "If you need a specific tone urgently, email us, and we’ll upgrade your plan to accommodate your request right away!",
-    },
-  ];
 
   const handleItemClick = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle the open index
   };
+
+  const halfLength = Math.ceil(faqData.length / 2);
 
   return (
     <main className="p-5 bg-neutral-900 min-h-fit pb-20">
@@ -88,32 +83,26 @@ const FAQ = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
             <ul data-aos="fade-right" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
-              {faqData
-                .slice(0, Math.ceil(faqData.length / 2))
-                .map((faq, index) => (
-                  <FAQItem
-                    key={index}
-                    question={faq.question}
-                    answer={faq.answer}
-                    isOpen={openIndex === index}
-                    onClick={() => handleItemClick(index)}
-                  />
-                ))}
+              {faqData.slice(0, halfLength).map((faq, index) => (
+                <FAQItem
+                  key={faq.question} // Use question as a key for better uniqueness
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => handleItemClick(index)}
+                />
+              ))}
             </ul>
             <ul data-aos="fade-left" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
-              {faqData
-                .slice(Math.ceil(faqData.length / 2))
-                .map((faq, index) => (
-                  <FAQItem
-                    key={index}
-                    question={faq.question}
-                    answer={faq.answer}
-                    isOpen={openIndex === index + Math.ceil(faqData.length / 2)} // Adjust index for the second column
-                    onClick={() =>
-                      handleItemClick(index + Math.ceil(faqData.length / 2))
-                    }
-                  />
-                ))}
+              {faqData.slice(halfLength).map((faq, index) => (
+                <FAQItem
+                  key={faq.question} // Use question as a key for better uniqueness
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index + halfLength} // Adjust index for the second column
+                  onClick={() => handleItemClick(index + halfLength)}
+                />
+              ))}
             </ul>
           </div>
         </div>
