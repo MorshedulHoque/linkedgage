@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
-import img1 from "../../images/1.webp";
-import img2 from "../../images/2.webp";
-import img3 from "../../images/3.webp";
+import img1 from "../../images/2.webp";
+import img2 from "../../images/3.webp";
+import img3 from "../../images/4.webp";
 
 const content = [
   {

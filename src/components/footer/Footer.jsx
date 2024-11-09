@@ -56,7 +56,16 @@ const Footer = () => {
                     href="#"
                     className="hover:underline"
                   >
-                    Privacy Policy / Terms of Service
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    rel="noopener noreferrer"
+                    href="#"
+                    className="hover:underline"
+                  >
+                    Terms of Service
                   </a>
                 </li>
               </ul>
