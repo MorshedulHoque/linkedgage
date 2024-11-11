@@ -26,47 +26,23 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-center justify-center py-10">
             <div className="space-y-3">
               <ul className="space-y-1 text-center lg:text-left text-sm lg:text-base">
-                <li>
+                <li className="hover:underline">
                   <Link to="/blog">Blog</Link>
                 </li>
-                <li>
+                <li className="hover:underline">
                   <Link to="/about">About Us</Link>
                 </li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:underline"
-                  >
-                    How It Works
-                  </a>
+                <li className="hover:underline">
+                  <Link to="/">How It Works</Link>
                 </li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:underline"
-                  >
-                    Contact Us
-                  </a>
+                <li className="hover:underline">
+                  <Link to="/">Contact Us</Link>
                 </li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:underline"
-                  >
-                    Privacy Policy
-                  </a>
+                <li className="hover:underline">
+                  <Link to="/privacy_policy">Privacy Policy</Link>
                 </li>
-                <li>
-                  <a
-                    rel="noopener noreferrer"
-                    href="#"
-                    className="hover:underline"
-                  >
-                    Terms of Service
-                  </a>
+                <li className="hover:underline">
+                  <Link to="/terms">Terms of Service</Link>
                 </li>
               </ul>
             </div>

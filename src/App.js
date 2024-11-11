@@ -4,6 +4,7 @@ import router from "./route/route"; // Your custom routes
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ReactGA from "react-ga4";  // Import react-ga4 for Google Analytics
+import ScrollToTop from "./components/ScrollToTop";
 
 // PageTracker component to track page views using useLocation
 const PageTracker = () => {
@@ -32,6 +33,7 @@ const App = () => {
     <div>
       {/* The RouterProvider should wrap your entire app, including PageTracker */}
       <RouterProvider router={router}>
+        <ScrollToTop />
         <PageTracker />  {/* PageTracker is now inside RouterProvider */}
       </RouterProvider>
     </div>
