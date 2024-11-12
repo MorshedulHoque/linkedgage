@@ -1,3 +1,21 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for linkedgage.com
+
+# Allow all web crawlers access to the entire site
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /private/
+Disallow: /settings/
+Disallow: /assets/
+Disallow: /entries/
+Disallow: /tags/
+Disallow: /locales/
+Disallow: /asset_keys/
+
+# Allow only specific pages
+Allow: /blog
+Allow: /about
+Allow: /privacy_policy
+Allow: /terms
+
+# Specify the location of the sitemap
+Sitemap: https://linkedgage.com/sitemap.xml
