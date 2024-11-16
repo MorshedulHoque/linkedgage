@@ -47,7 +47,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="uppercase text-center lg:text-left dark:text-white mt-4 text-sm lg:text-base">
-              Find us on
+            Let's get social
             </div>
             <div className="flex justify-center lg:justify-start space-x-3 mt-2">
               <ul className="flex">
@@ -75,7 +75,7 @@ const Footer = () => {
                 </li>
                 <li className="list-none">
                   <a
-                    href="https://www.linkedin.com/in/a-s-m-morshedul-hoque/"
+                    href="https://www.linkedin.com/company/linkedgage/"
                     className="w-8 h-8 md:w-8 md:h-8 bg-white rounded-md flex items-center justify-center border-4 border-white relative overflow-hidden hover:before:absolute hover:before:inset-0 hover:before:bg-blue-600 hover:before:transition-all"
                   >
                     <FontAwesomeIcon
