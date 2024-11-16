@@ -1,8 +1,5 @@
 import { createClient } from 'contentful';
 
-console.log('Space ID:', process.env.REACT_APP_CONTENTFUL_SPACE_ID);
-console.log('Access Token:', process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN);
-
 // Configuration for the Contentful client
 const client = createClient({
   space: process.env.REACT_APP_CONTENTFUL_SPACE_ID,

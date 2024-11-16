@@ -30,9 +30,12 @@
     "react-spinners": "^0.14.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xml2js": "^0.6.2"
   },
   "scripts": {
+    "generate-sitemap": "node generate-sitemap.js",
+    "prebuild": "npm run generate-sitemap",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

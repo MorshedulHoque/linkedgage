@@ -1,27 +1,8 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://linkedgage.com/</loc>
-        <lastmod>2024-11-12T21:16:45+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://linkedgage.com/blog</loc>
-        <lastmod>2024-11-12T21:16:45+01:00</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://linkedgage.com/about</loc>
-        <lastmod>2024-11-12T21:16:45+01:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://linkedgage.com/privacy_policy</loc>
-        <lastmod>2024-11-12T21:16:45+01:00</lastmod>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://linkedgage.com/terms</loc>
-        <lastmod>2024-11-12T21:16:45+01:00</lastmod>
-        <priority>0.3</priority>
-    </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://linkedgage.com/sitemap-main.xml</loc>
+    </sitemap>
+    <sitemap>
+        <loc>https://linkedgage.com/sitemap-blogs.xml</loc>
+    </sitemap>
+</sitemapindex>
