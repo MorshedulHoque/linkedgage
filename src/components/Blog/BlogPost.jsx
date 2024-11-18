@@ -4,7 +4,7 @@ import client from './contentfulClient';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { Helmet } from 'react-helmet';
-import { BeatLoader } from 'react-spinners'; // Make sure to install react-spinners via npm
+import { BeatLoader } from 'react-spinners';
 
 function BlogPost() {
     const { slug } = useParams();
