@@ -155,9 +155,9 @@ function BlogPost() {
             <div className="max-w-4xl mx-auto rounded-lg shadow-md p-6 blog-content text-justify bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" data-aos="fade" data-aos-duration="1000">
                 <Helmet>
                 <title>{post.fields.title}</title>
-                <meta name="description" content={post.fields.description} />
+                <meta name="description" content={post.fields.metaDescription || 'Default blog description'} />
                 <meta property="og:title" content={post.fields.title} />
-                <meta property="og:description" content={post.fields.description} />
+                <meta property="og:description" content={post.fields.metaDescription || 'Default blog description'} />
                 <meta property="og:image" content={post.fields.featuredImage.fields.file.url} />
                 <meta property="og:type" content="article" />
                 </Helmet>
@@ -170,9 +170,11 @@ function BlogPost() {
                     />
                 )}
                 <h1 className="text-3xl md:text-4xl font-bold mb-4 text-lightBlue">{post.fields.title}</h1>
-                <p className="text-sm mb-6 pt-2">
-                    By {post.fields.author} on {new Date(post.fields.createdDate).toLocaleDateString()}
+                <p className="text-sm mb-6 pt-2 text-white text-center">
+                    By <strong>{post.fields.author}</strong> on <strong>{new Date(post.fields.createdDate).toLocaleDateString()}</strong>
+                    <span className="block w-1/12 mx-auto border-b-2 border-lightBlue mt-1"></span>
                 </p>
+
                 <div className="text-slate-100 leading-relaxed richText text-slate-300">
                     {documentToReactComponents(post.fields.body, options)}
                 </div>
