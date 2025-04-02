@@ -21,7 +21,7 @@ jobs:
     - name: Deploy to VPS
       run: |
         ssh -o StrictHostKeyChecking=no user@203.82.193.150 << 'EOF'
-          cd /var/www/linkedgage || exit
+          cd /home/utsho1/htdocs/linkedgage || exit
           git pull origin main || exit
           npm install || exit
           npm run build || exit
