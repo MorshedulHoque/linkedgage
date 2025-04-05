@@ -34,10 +34,13 @@ jobs:
       # Step 5: Deploy to the server
       - name: Deploy to VPS server
         run: |
-          # Copy the build directory to the VPS server
-          scp -o StrictHostKeyChecking=no -r ./build/* utsho@203.82.193.150:/home/utsho1/htdocs/linkedgage/
-
-          # Restart Nginx to apply changes (if necessary)
           ssh -o StrictHostKeyChecking=no utsho@203.82.193.150 << 'EOF'
+            # Navigate to the React app directory
+            cd /home/utsho1/htdocs/linkedgage || exit 1
+            # Remove the old build files
+            rm -rf * || exit 1
+            # Copy the new build files
+            cp -r /tmp/linkedgage/build/* /home/utsho1/htdocs/linkedgage/ || exit 1
+            # Restart Nginx to apply changes (if necessary)
             sudo systemctl restart nginx || exit 1
           EOF
