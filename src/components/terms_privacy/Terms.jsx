@@ -32,7 +32,7 @@ const TermsOfService = () => {
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">4. Privacy</h2>
       <p className="mb-4">
-        Please review our <a href="/privacy_policy" className="text-blue-400">Privacy Policy</a>, which explains how we collect, use, and share your information.
+        Please review our <a href="/PrivacyPolicy" className="text-blue-400">Privacy Policy</a>, which explains how we collect, use, and share your information.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-2">5. Subscription and Payment</h2>

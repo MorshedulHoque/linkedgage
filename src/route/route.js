@@ -4,7 +4,7 @@ import Home from "../components/home/Home";
 import Blog from "../components/Blog/Blog";
 import BlogPost from "../components/Blog/BlogPost"; // Import your BlogPost component
 import About from "../components/about/About";
-import Privacy_policy from "../components/terms_privacy/Privacy_policy";
+import PrivacyPolicy from "../components/terms_privacy/PrivacyPolicy";
 import Terms from "../components/terms_privacy/Terms";
 
 const router = createBrowserRouter([
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/privacy_policy",
-        element: <Privacy_policy />,
+        path: "/PrivacyPolicy",
+        element: <PrivacyPolicy />,
       },
       {
         path: "/terms",
