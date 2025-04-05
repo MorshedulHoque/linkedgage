@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import client from './contentfulClient';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -12,11 +12,8 @@ function BlogPost() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
-        fetchPost();
-    }, [slug]);
-
-    async function fetchPost() {
+    // Wrap fetchPost with useCallback to prevent unnecessary re-renders
+    const fetchPost = useCallback(async () => {
         try {
             const response = await client.getEntries({
                 'fields.slug': slug,
@@ -33,7 +30,11 @@ function BlogPost() {
         } finally {
             setLoading(false);
         }
-    }
+    }, [slug]); // The fetchPost function now depends on 'slug'
+
+    useEffect(() => {
+        fetchPost();
+    }, [fetchPost]); // Now, fetchPost is in the dependency array
 
     if (loading) return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}><BeatLoader color="#36D7B7" /></div>;
     if (error) return (
@@ -154,12 +155,12 @@ function BlogPost() {
             </style>
             <div className="max-w-4xl mx-auto rounded-lg shadow-md p-6 blog-content text-justify bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" data-aos="fade" data-aos-duration="1000">
                 <Helmet>
-                <title>{post.fields.title}</title>
-                <meta name="description" content={post.fields.metaDescription || 'Default blog description'} />
-                <meta property="og:title" content={post.fields.title} />
-                <meta property="og:description" content={post.fields.metaDescription || 'Default blog description'} />
-                <meta property="og:image" content={post.fields.featuredImage.fields.file.url} />
-                <meta property="og:type" content="article" />
+                    <title>{post.fields.title}</title>
+                    <meta name="description" content={post.fields.metaDescription || 'Default blog description'} />
+                    <meta property="og:title" content={post.fields.title} />
+                    <meta property="og:description" content={post.fields.metaDescription || 'Default blog description'} />
+                    <meta property="og:image" content={post.fields.featuredImage.fields.file.url} />
+                    <meta property="og:type" content="article" />
                 </Helmet>
                 {post.fields.featuredImage && (
                     <img
