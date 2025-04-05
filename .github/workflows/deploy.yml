@@ -1,29 +1,46 @@
-name: Deploy to VPS
+name: Deploy React App to VPS
 
 on:
   push:
     branches:
-      - main  # Or master branch
+      - main  # Trigger on push to the main branch
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # This runs on the latest Ubuntu runner
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSHKEY }}
+      # Step 2: Set up SSH for secure communication with the server
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Use the private key stored in GitHub secrets
 
-    - name: Deploy to VPS
-      run: |
-        ssh -o StrictHostKeyChecking=no utsho@203.82.193.150 << 'EOF'
-          cd /home/utsho1/htdocs/linkedgage || exit
-          git pull origin main || exit
-          npm install || exit
-          npm run build || exit
-          sudo service nginx reload || exit
-        EOF
+      # Step 3: Install Node.js and dependencies
+      - name: Set up Node.js and install dependencies
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Ensure the correct version of Node.js is installed
+      - run: npm install  # Install project dependencies
+
+      # Step 4: Build the React app
+      - name: Build React app
+        run: npm run build
+
+      # Step 5: Deploy to the server
+      - name: Deploy to VPS server
+        run: |
+          ssh -o StrictHostKeyChecking=no utsho@203.82.193.150 << 'EOF'
+            # Navigate to the React app directory
+            cd /home/utsho1/htdocs/linkedgage || exit 1
+            # Remove the old build files
+            rm -rf * || exit 1
+            # Copy the new build files
+            cp -r /tmp/linkedgage/build/* /home/utsho1/htdocs/linkedgage/ || exit 1
+            # Restart Nginx to apply changes (if necessary)
+            sudo systemctl restart nginx || exit 1
+          EOF
