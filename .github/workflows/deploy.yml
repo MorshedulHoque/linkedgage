@@ -24,20 +24,23 @@ jobs:
       - name: Set up Node.js and install dependencies
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Ensure the correct version of Node.js is installed
-      - run: npm install  # Install project dependencies
+          node-version: '16'
+      - run: npm install
 
       # Step 4: Build the React app
       - name: Build React app
         run: npm run build
 
-      # Step 5: Deploy to the server
+      # Step 5: Deploy to the VPS server
       - name: Deploy to VPS server
         run: |
-          # Securely copy the build directory to the VPS server
-          scp -o StrictHostKeyChecking=no -r ./build/* utsho@203.82.193.150:/home/utsho1/htdocs/linkedgage/
+          # Remove the old build folder on the server (important!)
+          ssh -o StrictHostKeyChecking=no utsho@203.82.193.150 "rm -rf /home/utsho1/htdocs/linkedgage/build"
 
-          # Restart Nginx to apply changes (if necessary)
+          # Upload the entire build folder (not just contents)
+          scp -o StrictHostKeyChecking=no -r ./build utsho@203.82.193.150:/home/utsho1/htdocs/linkedgage/
+
+          # Restart Nginx to apply changes
           ssh -o StrictHostKeyChecking=no utsho@203.82.193.150 << 'EOF'
             sudo systemctl restart nginx || exit 1
           EOF
