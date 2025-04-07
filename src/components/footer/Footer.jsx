@@ -18,7 +18,7 @@ const Footer = () => {
               <img src={Logo} alt="Homepage" className="w-56 mt-2 h-auto" />
             </a>
             <p className="w-11/12 lg:w-96 text-center lg:text-left text-sm lg:text-base">
-              New Effortlessly elevate your LinkedIn game with AI-powered,
+              Effortlessly elevate your LinkedIn game with AI-powered,
               custom-tailored comments. Boost your engagement in real-time,
               across any language, with just one click!
             </p>
