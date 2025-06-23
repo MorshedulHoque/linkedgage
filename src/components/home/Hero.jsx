@@ -52,9 +52,11 @@ const Hero = () => {
         <p className="text-xs sm:text-sm md:text-lg lg:text-xl mb-2 md:mb-4 w-[70%] lg:w-full text-gray-200">
           Generate engaging comments tailored to your tone and content!
         </p>
-        <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm sm:text-base md:text-lg transition-all duration-800 ease-in-out justify-center">
-          <div className="indicator">Download Extension</div>
-        </button>
+        <a href="https://chromewebstore.google.com/detail/linkedgage/jabchfeeiiohpmjfjjgbcojepkmkjmjl" target="_blank" rel="noopener noreferrer">
+          <button className="btn btn-ghost slow-glow-button bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-sm sm:text-base md:text-lg transition-all duration-800 ease-in-out justify-center">
+            <div className="indicator">Download Extension</div>
+          </button>
+        </a>
       </div>
 
       {/* Curve background */}

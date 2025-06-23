@@ -77,9 +77,11 @@ const Navbar = () => {
         {/* Button Section for Desktop */}
         <div className="hidden md:flex flex-row gap-4 flex-1 justify-center">
           <button className="btn btn-ghost text-lg">Home</button>
-          <button className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-lg">
-            Download Extension
-          </button>
+          <a href="https://chromewebstore.google.com/detail/linkedgage/jabchfeeiiohpmjfjjgbcojepkmkjmjl" target="_blank" rel="noopener noreferrer">
+            <button className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-0 hover:from-blue-950 hover:to-blue-400 shadow-md text-lg">
+              Download Extension
+            </button>
+          </a>
         </div>
       </div>
 
@@ -103,12 +105,14 @@ const Navbar = () => {
           >
             Home
           </button>
-          <button
-            className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-none focus:outline-none focus:ring-none hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
-            onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
-          >
-            Download Extension
-          </button>
+          <a href="https://chromewebstore.google.com/detail/linkedgage/jabchfeeiiohpmjfjjgbcojepkmkjmjl" target="_blank" rel="noopener noreferrer">
+            <button
+              className="btn btn-ghost bg-gradient-to-r from-lightBlue to-blue-950 text-white border-none focus:outline-none focus:ring-none hover:from-blue-950 hover:to-blue-400 shadow-md text-lg"
+              onClick={() => setIsSidebarOpen(false)} // Close when tapping on the menu item
+            >
+              Download Extension
+            </button>
+          </a>
         </div>
       )}
     </div>

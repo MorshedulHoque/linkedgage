@@ -15,9 +15,11 @@ const HeroFourth = () => {
             <h2 className="text-2xl md:text-4xl font-bold leading-tight text-gray-50 mb-6">
               Join Thousands of Professionals Today!
             </h2>
-            <button className="btn btn-neutral bg-gradient-to-r from-gray-800 to-gray-900 text-white px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300">
-              Download
-            </button>
+            <a href="https://chromewebstore.google.com/detail/linkedgage/jabchfeeiiohpmjfjjgbcojepkmkjmjl" target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-neutral bg-gradient-to-r from-gray-800 to-gray-900 text-white px-6 py-2 rounded-full hover:scale-105 transition-transform duration-300">
+                Download
+              </button>
+            </a>
           </div>
         </div>
         {/* Image Content */}
