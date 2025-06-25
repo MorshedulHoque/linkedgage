@@ -153,7 +153,7 @@ function BlogPost() {
                     }         
                 `}
             </style>
-            <div className="max-w-4xl mx-auto rounded-lg shadow-md p-6 blog-content text-justify bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" data-aos="fade" data-aos-duration="1000">
+            <div className="max-w-4xl mx-auto rounded-lg shadow-md p-6 blog-content text-justify bg-[linear-gradient(to_right,#80808005_1px,transparent_1px),linear-gradient(to_bottom,#80808005_1px,transparent_1px)] bg-[size:24px_24px]" data-aos="fade" data-aos-duration="1000">
                 <Helmet>
                     <title>{post.fields.title}</title>
                     <meta name="description" content={post.fields.metaDescription || 'Default blog description'} />
@@ -176,7 +176,7 @@ function BlogPost() {
                     <span className="block w-1/12 mx-auto border-b-2 border-lightBlue mt-1"></span>
                 </p>
 
-                <div className="text-slate-100 leading-relaxed richText text-slate-300">
+                <div className="leading-relaxed richText text-slate-50">
                     {documentToReactComponents(post.fields.body, options)}
                 </div>
             </div>
