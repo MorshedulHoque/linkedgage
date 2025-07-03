@@ -177,7 +177,7 @@ function BlogPost() {
                 </p>
 
                 <div className="leading-relaxed richText text-slate-50">
-                    {documentToReactComponents(post.fields.body, options)}
+                    {documentToReactComponents(post.fields.body, options)} 
                 </div>
             </div>
         </div>
